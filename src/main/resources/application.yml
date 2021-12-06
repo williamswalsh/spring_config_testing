@@ -2,3 +2,24 @@ setting:
   myConf: "hello-world-spring-config-style"
   myOtherConf: "hello-money-penny"
 
+
+#spring:
+#  profiles:
+#    active:
+#      - uat
+
+---
+spring:
+  profiles: prod
+
+my.specific.setting: "This is PROD"
+---
+spring:
+  profiles: uat
+
+my.specific.setting: "This is UAT"
+---
+spring:
+  profiles: dev
+
+my.specific.setting: "This is DEV"

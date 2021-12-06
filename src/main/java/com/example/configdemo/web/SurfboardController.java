@@ -1,6 +1,6 @@
 package com.example.configdemo.web;
 
-import com.example.configdemo.config.BasicConfig;
+import com.example.configdemo.config.SurfboardConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class SurfboardController {
 
     @Autowired
-    private BasicConfig config;
+    private SurfboardConfig config;
 
     @GetMapping
     public String method(){
-        return config.getMyConf() + config.getMyOtherConf();
+        return config.getMyEnvironmentConfig() + ", " + config.getMyConf() + ", " +  config.getMyOtherConf();
     }
 }
