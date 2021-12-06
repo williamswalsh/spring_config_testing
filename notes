@@ -1,0 +1,7 @@
+# Set the profile which you want to use, via a command line arg:
+mvn spring-boot:run -Dspring-boot.run.profiles=uat
+
+# Set dev as the active profile
+# Note export only influences the child process running in the current shell
+# N.B. must be capital letters otherwise it is unrecognised
+export SPRING_PROFILES_ACTIVE=dev
